@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Informed Automation Suite" parallel="none">
+
+	<!-- dtiverType = Firefox, Chrome -->
+	<parameter name="driverType" value="Chrome"></parameter>
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+	<test name="Informed Automation Test">
+		<classes>
+			<class name="informed.images.LoginTest" />
+			<class name="informed.images.PackagesDownloadTest" />
+			<class name="informed.images.MailSearchTest" />
+			<class name="informed.images.PackagesSearchTest" />
+			<!-- <class name="informed.images.PackagesSearchTest" /> -->
+		</classes>
+	</test>
+
+
+</suite>

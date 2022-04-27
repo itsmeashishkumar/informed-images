@@ -1,0 +1,6 @@
+reports
+.idea
+.settings
+testDir
+test-output
+target
