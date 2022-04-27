@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import informed.greetings.utils.BasePage;
-import informed.greetings.utils.WaitTime;
-import informed.greetings.utils.WebElementUtils;
+import informed.images.utils.BasePage;
+import informed.images.utils.WaitTime;
+import informed.images.utils.WebElementUtils;
 
 public class PackagesPage extends BasePage{
 	

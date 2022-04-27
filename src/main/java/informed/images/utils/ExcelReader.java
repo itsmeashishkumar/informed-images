@@ -1,4 +1,4 @@
-package informed.greetings.utils;
+package informed.images.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

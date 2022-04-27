@@ -1,4 +1,4 @@
-package informed.images;
+package informed.images.test;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +28,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-import informed.greetings.utils.PropertiesLoader;
+import informed.images.utils.PropertiesLoader;
 
 public abstract class BaseTest {
 	private enum DriverType {

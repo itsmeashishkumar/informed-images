@@ -1,7 +1,7 @@
 /**
  * 
  */
-package informed.greetings.utils;
+package informed.images.utils;
 
 /**
  * @author utripathi

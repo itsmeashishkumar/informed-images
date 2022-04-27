@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import informed.greetings.utils.BasePage;
-import informed.greetings.utils.WaitTime;
+import informed.images.utils.BasePage;
+import informed.images.utils.WaitTime;
 
-public class InformedImagesLoginPage extends BasePage {
+public class LoginPage extends BasePage {
 	private WebDriver driver;
 
 	@FindBy(id = "username")
@@ -23,7 +23,7 @@ public class InformedImagesLoginPage extends BasePage {
 	@FindBy(id = "kc-login")
 	private WebElement loginBtn;
 
-	public InformedImagesLoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -39,10 +39,10 @@ public class InformedImagesLoginPage extends BasePage {
 		Reporter.log("<br>enterPassWord::" + uPassWord, true);
 	}
 
-	public InformedImagesHomePage clickSignIn() {
+	public HomePage clickSignIn() {
 		loginBtn.click();
 		Reporter.log("<br>clickSignIn", true);
-		return new InformedImagesHomePage(driver);
+		return new HomePage(driver);
 	}
 
 }

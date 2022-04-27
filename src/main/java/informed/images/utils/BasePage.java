@@ -1,4 +1,4 @@
-package informed.greetings.utils;
+package informed.images.utils;
 
 import java.util.Map;
 import java.util.Map.Entry;

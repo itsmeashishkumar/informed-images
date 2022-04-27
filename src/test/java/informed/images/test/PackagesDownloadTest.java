@@ -1,17 +1,20 @@
-package informed.images;
+package informed.images.test;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import informed.images.po.InformedImagesHomePage;
-import informed.images.po.InformedImagesLoginPage;
+import informed.images.po.HomePage;
+import informed.images.po.LoginPage;
 import informed.images.po.PackagesPage;
 import informed.images.po.SearchResultPage;
+import informed.images.utils.ManageScreenshots;
 
 public class PackagesDownloadTest extends BaseTest{
-	private InformedImagesLoginPage loginPage;
-	private InformedImagesHomePage homePage;
+	private LoginPage loginPage;
+	private HomePage homePage;
 	private PackagesPage packagesPage;
 	private SearchResultPage searchResultPage;
 	
@@ -19,7 +22,7 @@ public class PackagesDownloadTest extends BaseTest{
 	public void beforeClass() {
 		driver.get(informedImagesURL);
 
-		loginPage = new InformedImagesLoginPage(driver);
+		loginPage = new LoginPage(driver);
 		loginPage.enterUserName("Uspsdemoou");
 		loginPage.enterPassword("Opt1m0123!u");
 		homePage = loginPage.clickSignIn();
@@ -38,6 +41,13 @@ public class PackagesDownloadTest extends BaseTest{
 		packagesPage.clickDownloadRideAlongImage();
 		
 		Assert.assertEquals(packagesPage.getDownloadSuccessMsg(),"Thank You! Your Ride-Along Image is downloading.");
+	}
+	
+	@AfterMethod (alwaysRun = true)
+	public void takeScreenShot(ITestResult result) {
+	    if(ITestResult.FAILURE == result.getStatus()) {
+	    	ManageScreenshots.takeScreenShot(result,driver, result.getName());
+	    }
 	}
 
 }

@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import informed.greetings.utils.BasePage;
-import informed.greetings.utils.WaitTime;
-import informed.greetings.utils.WebElementUtils;
+import informed.images.utils.BasePage;
+import informed.images.utils.WaitTime;
+import informed.images.utils.WebElementUtils;
 
-public class InformedImagesHomePage extends BasePage {
+public class HomePage extends BasePage {
 	private WebDriver driver;
 
 	@FindBy(xpath = "//button[text()='Start Now']")
@@ -40,16 +40,16 @@ public class InformedImagesHomePage extends BasePage {
 	@FindBy(xpath = "//h5[text()='Packages']")
 	private WebElement packagesTab;
 	
-	public InformedImagesHomePage(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	public InformedImagesHomePage clickStartNow() {
+	public HomePage clickStartNow() {
 		startNow.click();
 		Reporter.log("<br>clickStartNow", true);
-		return new InformedImagesHomePage(driver);
+		return new HomePage(driver);
 	}
 
 	public SearchResultPage searchWithKeyword(String searchKeyword) {

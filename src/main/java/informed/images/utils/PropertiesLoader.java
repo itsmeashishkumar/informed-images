@@ -1,4 +1,4 @@
-package informed.greetings.utils;
+package informed.images.utils;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
